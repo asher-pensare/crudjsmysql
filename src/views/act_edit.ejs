@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Actividad</title>
+        <link  href="https://bootswatch.com/4/lux/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="/" class="navbar-brand">Actividad</a>
+        </nav>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="/update/<%= data.id %>" method="post">
+                                <div class="form-group">
+                                    <input type="text" name="nombre" value="<%= data.nombre %>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="client" value="<%= data.client %>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="requestedBy" value="<%= data.requestedBy %>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="requestDate" value="<%= data.requestDate %>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" name="completionDate" value="<%= data.completionDate %>" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="hourss" value="<%= data.hourss %>" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Editar Actividad
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
